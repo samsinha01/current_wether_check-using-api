@@ -41,7 +41,7 @@ const windSpeedDesc = document.querySelector('.weather-bottom>div:nth-child(2)>p
 const description = document.querySelector(".weather-desc>p");
 async function checkweather(city){
     const api_key = "7779f277daf41ef813627ec380aa68cf";
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}`;
 
     try {
         const response = await fetch(url);
