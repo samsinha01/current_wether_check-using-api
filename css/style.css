@@ -1,0 +1,160 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background: url('../img/cloud.jpg') no-repeat center;
+    background-size: cover;
+}
+main{
+    /* backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px); */
+    width:100vw;
+    height:100vh;
+    display: flex;
+    line-height:0;
+}
+.weather-time>h1{
+    font-size: 100px;
+    color: #253552;
+}
+.weather-time>h1>span{
+    font-size: 25px;
+}
+.weather-time>p{
+    font-size: 28px;
+    text-indent: 4px;
+    letter-spacing: 3px;
+    color: #4d537a;
+}
+
+
+
+/******************INPUT-FIELD-CSS************************/
+.location-input>div>input{
+    border-radius:50px;
+    background-color: #cfb4b46e;
+    border: 1px solid #b9b9b9;
+    padding-left:55px;
+}
+.location-input>div>i{
+    position:absolute;
+    left:20px;
+    top:12px;
+    color:#8b8b8b
+}
+.location-input>button{
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #bae5f4;
+    transition: all .3s ease;
+}
+.sparkle {
+    transition: all 800ms ease;
+} 
+.location-input>button:hover {
+    background: linear-gradient(0deg,#A47CF3,#683FEA);
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
+    inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),
+    0px 0px 0px 4px rgba(255, 255, 255, 0.2),
+    0px 0px 180px 0px #9917FF;
+    transform: translateY(-2px);
+    color:#fff;
+    font-weight: bold;
+}
+.location-input>button:hover .sparkle {
+    transform: scale(1.2);
+} 
+@media(min-width:528px){
+    .location-input>div{
+        width:50%;
+    }
+}
+@media(max-width:528px){
+    .location-input>div{
+        margin-bottom:10px;
+    }
+    .location-input{
+        text-align: center;
+    }
+    .location-input>button{
+        padding-block:17px;
+    }
+}
+
+/* Loader styling */
+.loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loader {
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #3498db;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+/* Spin animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Fade-out animation */
+.loader-wrapper.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+/* *****************Add css for animation***************** */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0; /* Hidden initially */
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.5s;
+}
+
+.delay-2 {
+    animation-delay: 1s;
+}
+
+.delay-3 {
+    animation-delay: 1.5s;
+}
+
+.delay-4 {
+    animation-delay: 2s;
+}
+
+.delay-5 {
+    animation-delay: 2.5s;
+}
